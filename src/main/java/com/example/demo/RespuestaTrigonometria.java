@@ -6,3 +6,5 @@ public class RespuestaTrigonometria {
     double angulo2;
 
 }
+
+

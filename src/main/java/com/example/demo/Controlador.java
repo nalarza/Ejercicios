@@ -39,4 +39,15 @@ public class Controlador {
     }
 
 
+    public class controlador {
+        @GetMapping("/longitud")
+        public longitudTerreno
+
+
+    }
+
+
+
+
+
 }
