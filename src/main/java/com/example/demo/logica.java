@@ -52,10 +52,18 @@ public static String califiaciones(){
     return null;
 }
 
-    public static double hectometros (double num1){
-        double resultado= num1;
-        resultado= RadianesAGrados(resultado);
-        return resultado;
+    public static String representacion ( double hectometros, double decametros, double metros){
+
+
+        double num1= hectometros/100;
+        double num2= decametros/10;
+        double num3= metros*1;
+
+        return num1;
+
+
+
+
     }
 }
 

@@ -40,8 +40,8 @@ public class Controlador {
 
 
     public class controlador {
-        @GetMapping("/longitud")
-        public longitudTerreno
+        @GetMapping(value="/representacion", consumes = MediaType.APPLICATION_JSON_VALUE)
+        public longitudTerreno representacion (@RequestParam double num1, @RequestParam double num2)
 
 
     }
