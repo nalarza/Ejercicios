@@ -52,8 +52,8 @@ public static String califiaciones(){
     return null;
 }
 
-    public static double hectometros (double num1, double hipotenusa){
-        double resultado=Math.asin(num1/hipotenusa);
+    public static double hectometros (double num1){
+        double resultado= num1;
         resultado= RadianesAGrados(resultado);
         return resultado;
     }
