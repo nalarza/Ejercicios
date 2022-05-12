@@ -38,10 +38,17 @@ public class Controlador {
         return res;
     }
 
+    @RestController
 
     public class controlador {
         @GetMapping(value="/representacion", consumes = MediaType.APPLICATION_JSON_VALUE)
-        public longitudTerreno representacion (@RequestParam double num1, @RequestParam double num2)
+        public longitudTerreno representacion (@RequestParam double num1,@RequestParam double num2, @RequestParam double num3){
+            double hectometros = logica.representacion(num1,);
+            double decametros =  logica.representacion (num2);
+            double metros =      logica.representacion(num3,);
+
+
+        }
 
 
     }

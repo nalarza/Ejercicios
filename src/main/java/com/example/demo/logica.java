@@ -52,12 +52,12 @@ public static String califiaciones(){
     return null;
 }
 
-    public static String representacion ( double hectometros, double decametros, double metros){
+    public static double representacion (double num1, double num2, double num3){
 
 
-        double num1= hectometros/100;
-        double num2= decametros/10;
-        double num3= metros*1;
+        double operacion1 = num1/100;
+        double operacion2 = num2/10;
+        double operacion3= num3*1;
 
         return num1;
 

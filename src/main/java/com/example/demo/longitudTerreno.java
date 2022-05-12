@@ -2,7 +2,7 @@ package com.example.demo;
 
 public class longitudTerreno {
 
-    double hetometros;
+    double hectometros;
     double decametros;
     double metros;
 }
