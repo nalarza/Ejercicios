@@ -43,9 +43,16 @@ public class Controlador {
     public class controlador {
         @GetMapping(value="/representacion", consumes = MediaType.APPLICATION_JSON_VALUE)
         public longitudTerreno representacion (@RequestParam double num1,@RequestParam double num2, @RequestParam double num3){
-            double hectometros = logica.representacion(num1,);
-            double decametros =  logica.representacion (num2);
-            double metros =      logica.representacion(num3,);
+            double hectometros = logica.representacion(num1,num2,num3);
+            double decametros =  logica.representacion(num1,num2,num3);
+            double metros =      logica.representacion(num1,num2,num3);
+
+            longitudTerreno longitudterr= new longitudTerreno();
+            longitudterr.hectometros=hectometros;
+            longitudterr.decametros=decametros;
+            longitudterr.metros=metros;
+            return longitudterr;
+
 
 
         }
