@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.apache.tomcat.util.http.parser.MediaType;
 
 public class logica {
 public static double Hipotenusa(double num1, double num2){
@@ -19,13 +19,10 @@ public static double Hipotenusa(double num1, double num2){
         return resultado;
     }
 
-public static double fuerzaDeAtraccion(){
-    var masa1 = 6;
-    var masa2 = 7;
-    var distancia = 2;
-    var g = 6.673*(10^-8);
+public static double fuerzaDeAtraccion(double masa1, double masa2, double distancia){
+    double g = 6.673*(10^-8);
     //var g = 0.00000006673;
-    var resultado = g*masa1*masa2/distancia/distancia;
+    double resultado = (g*masa1*masa2) / (distancia/distancia);
     return resultado;
 }
 
@@ -53,27 +50,5 @@ public static String califiaciones(){
     }
     return null;
 }
-    public static double hectometros (double num1){
-        double operacion1 = num1/100;
-        return operacion1;
-        }
-
-    public static double decametros (double num2){
-        double operacion2 = num2/10;
-        return operacion2;
-    }
-
-    public static double metros (double num3) {
-        double operacion3 = num3*1;
-        return operacion3;
-    }
-
-
-
-
-
-
-
 }
-
 
