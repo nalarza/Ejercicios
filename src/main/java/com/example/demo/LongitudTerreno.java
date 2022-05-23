@@ -1,6 +1,6 @@
 package com.example.demo;
 
-public class longitudTerreno {
+public class LongitudTerreno {
 
     double hectometros;
     double decametros;

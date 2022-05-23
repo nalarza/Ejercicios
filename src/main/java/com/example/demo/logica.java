@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+
 public class logica {
 public static double Hipotenusa(double num1, double num2){
 
@@ -51,19 +53,27 @@ public static String califiaciones(){
     }
     return null;
 }
-
-    public static double representacion (double num1, double num2, double num3){
-
-
+    public static double hectometros (double num1){
         double operacion1 = num1/100;
+        return operacion1;
+        }
+
+    public static double decametros (double num2){
         double operacion2 = num2/10;
-        double operacion3= num3*1;
-
-        return num1;
-
-
-
-
+        return operacion2;
     }
+
+    public static double metros (double num3) {
+        double operacion3 = num3*1;
+        return operacion3;
+    }
+
+
+
+
+
+
+
 }
+
 

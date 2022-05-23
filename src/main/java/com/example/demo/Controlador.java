@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.http.MediaType;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 import org.springframework.web.bind.annotation.*;
 
 import static com.example.demo.logica.*;
@@ -38,30 +39,40 @@ public class Controlador {
         return res;
     }
 
-    @RestController
 
-    public class controlador {
         @GetMapping(value="/representacion", consumes = MediaType.APPLICATION_JSON_VALUE)
-        public longitudTerreno representacion (@RequestParam double num1,@RequestParam double num2, @RequestParam double num3){
-            double hectometros = logica.representacion(num1,num2,num3);
-            double decametros =  logica.representacion(num1,num2,num3);
-            double metros =      logica.representacion(num1,num2,num3);
+        public LongitudTerreno representacion (@RequestParam double num1, @RequestParam double num2, @RequestParam double num3){
+            double hectometros = logica.hectometros(num1);
+            double decametros =  logica.decametros(num2);
+            double metros =      logica.metros(num3);
 
-            longitudTerreno longitudterr= new longitudTerreno();
-            longitudterr.hectometros=hectometros;
-            longitudterr.decametros=decametros;
-            longitudterr.metros=metros;
-            return longitudterr;
+            LongitudTerreno longitudTerreno= new LongitudTerreno();
+            longitudTerreno.hectometros=hectometros;
+            longitudTerreno.decametros=decametros;
+            longitudTerreno.metros=metros;
+            return longitudTerreno;
+
+    }
+
+         @RequestMapping("/saludos")
+               String hellow(){
+              return "Hello World!";
+              }
 
 
+         @RequestMapping ("/operadores")
 
-        }
+         public static double suma (){
+          int num1=5;
+          int num2=6;
+             double adicion= num1+num2;
+
+          return adicion;
+         }
+         //estes un comentario
 
 
     }
 
 
 
-
-
-}
