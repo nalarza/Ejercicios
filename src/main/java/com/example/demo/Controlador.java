@@ -3,8 +3,6 @@ package com.example.demo;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import static com.example.demo.logica.*;
-
 @RestController
 @RequestMapping(value = "/control")
 public class Controlador {
@@ -27,15 +25,15 @@ public class Controlador {
     }
 
     @GetMapping(value = "/numeroPositivo")
-    public String numero(){
-        var res = numeroPositivo();
-        return res;
+    public long numero(@RequestParam long numero){
+        long respuesta = Long.parseLong(logica.numeroPositivo(numero));
+        return respuesta;
     }
 
     @GetMapping(value = "/calificacion")
-    public String calificacion(){
-        var res=califiaciones();
-        return res;
+    public double calificacion(@RequestParam double numero){
+        double respuesta = Double.parseDouble(logica.califiaciones(numero));
+        return respuesta;
     }
 
 

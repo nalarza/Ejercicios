@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import org.apache.tomcat.util.http.parser.MediaType;
-
 public class logica {
 public static double Hipotenusa(double num1, double num2){
 
@@ -26,8 +24,7 @@ public static double fuerzaDeAtraccion(double masa1, double masa2, double distan
     return resultado;
 }
 
-public static String numeroPositivo(){
-    var numero = 3;
+public static String numeroPositivo(long numero){
     if (numero >= 0){
         return "el numero es positivo";
     }else {
@@ -35,8 +32,7 @@ public static String numeroPositivo(){
     }
 }
 
-public static String califiaciones(){
-    var numero = 76;
+public static String califiaciones(double numero){
     if (numero >=0 && numero<=59){
         return "su calificacion es ( E )";
     }else if (numero >=60 && numero <=69){
@@ -48,7 +44,7 @@ public static String califiaciones(){
     }else if (numero >= 90 && numero <=100){
         return "su calificacion es ( A )";
     }
-    return null;
+    return "SU CALIFICACION NO PUDO SER PROCESADA";
 }
 }
 
